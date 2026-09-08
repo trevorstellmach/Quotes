@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <nav>
+        <li><a href="{% url 'home_page' %}">Home</a></li>
+        <li><a href="{% url 'about_page' %}">About</a></li>
+    </nav>
+    
+    <!-- put page specific content -->
+     {% block content %}
+     {% endblock %}
+    <footer>
+        the current time is {{time}}. <br>
+        this page brought by letters {{letter1}} and {{letter2}} and number {{number}}
+    </footer>
+</body>
+
+</html>
