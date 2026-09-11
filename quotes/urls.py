@@ -7,6 +7,6 @@ from django.conf import settings
 from . import views
 
 urlpatterns = [
-    path(r'', views.home_page, name="home_page")
+    path(r'', views.quote, name="quote_page") # quote page path
 
 ]

@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<head>
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <nav>
+        <li><a href="{% url 'quote_page' %}"></a>Quote</li>
+
+    </nav>
+    
+    <!-- put page specific content -->
+     {% block content %}
+     {% endblock %}
+</body>
+
+</html>
