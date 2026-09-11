@@ -35,3 +35,23 @@ def quote(request):
     template_name = "quotes/quote.html"     # references quote html file
 
     return render(request, template_name, context)
+
+def show_all(request):
+    """ responds to 'show all' url """
+
+    #context variables
+    context = {
+        "quotes": quotes,
+        "images": images
+    }
+
+    template_name = "quotes/show_all.html"  # references show all html file
+
+    return render(request, template_name, context)
+
+def about(request):
+    """ responds to 'about' url"""
+
+    template_name = "quotes/about.html" # references about html file
+
+    return render(request, template_name)
