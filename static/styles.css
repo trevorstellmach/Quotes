@@ -1,232 +1,239 @@
 body {
-    background-color: #fff;
-    color: slategray;
-    font-family: arial;
+    background: #efe7d3;
+    color: #1f2d32;
+    font-family: Georgia, "Times New Roman", serif;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+    line-height: 1.6;
+    position: relative;
 }
 
-h1,h2,h3,h4,h5{
-    font-weight: normal;
-    background:aliceblue;
-    margin: 0;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.06)),
+        repeating-linear-gradient(
+            0deg,
+            rgba(30, 35, 32, 0.025),
+            rgba(30, 35, 32, 0.025) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a2b2f;
+    margin: 0 0 18px;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    margin-top: 24px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.18em;
+}
+
+p {
+    color: #24363d;
+    font-size: 1.50rem;
+    text-align: center;
 }
 
 img {
-    max-width: 300px;
+    max-width: 360px;
     height: auto;
+    margin: 0 auto;
+    display: block;
+    border: 3px solid #1a2b2f;
+    box-shadow: 12px 12px 0 #a46842;
+    background: #d4cbb4;
 }
 
 a, a:visited {
-    color: slategrey;
+    color: #1c2a2d;
     text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 a:hover {
-    color: darkblue;
-    text-decoration: none;
-    background-color: white;
-    /* font-weight: bold; */
+    color: #a46842;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
-body {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 20px auto;
+nav {
+    margin: 0 auto 30px;
+    padding-top: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    margin: 0;
+    padding: 12px 0;
+    border-top: 2px solid #1a2b2f;
+    border-bottom: 2px solid #1a2b2f;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav a {
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background:aliceblue;
-    position: fixed;
-    top: 0px;
-    z-index: 999;
-    /* padding-right: 50px auto; */
+    background: transparent;
+    position: static;
 }
 
 footer {
     width: 100%;
-    background:aliceblue;
-    position: fixed;
-    bottom: 0px;
+    background: transparent;
+    position: static;
 }
 
-
-.wrapper {              /* centering and margin around whole wrapper element */
-    border: 2px solid;
+.wrapper {
     max-width: 100%;
     position: relative;
-    top: 50px;
-    scroll-padding-top: 100px;
-    /* scroll-padding-bottom: 100px; */
     padding-bottom: 50px;
-    
-    /* top:100px; */
-    /* bottom: 100px; */
 }
-
-
-div.wrapper h1 {
-    text-align: center;
-    color: darkblue;
-    margin: 10px auto;
-    font-size: 2.4 em; 
-
-}
-
-div.wrapper h2 {
-    text-align: left;
-    color: darkblue;
-    margin: 5px auto;
-    font-size: 2 em; 
-}
-
 
 section {
-    border: 2px solid darkblue;    /* border around each event */
+    border: 2px solid #1a2b2f;
     position: relative;
-    padding-bottom: 4px;
-}
-
-
-nav {
-    justify-self: end;
-    background: none;
-    color: darkblue;
-    /* border: 1px solid; */
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav button {
-    background: none;
-    color: slategray;
-    font-family: Arial;
-    cursor: pointer; 
-    border: 0;
-    font-size: 1.2 em;
+    padding: 18px 18px 12px;
+    background: rgba(255, 255, 255, 0.11);
 }
 
 .mc-table {
     display: table;
     width: 100%;
     table-layout: fixed;
+    border-collapse: collapse;
 }
 
-
 .mc-table-head {
-    border: 1px dashed darkblue;    /*border around each row */
     display: table-row;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .mc-table-head .detail {
     display: table-cell;
-    color:darkblue;
-    font-weight: bold;
-    background-color: white;
-    padding: 5px;
-    position: relative;
-   
+    color: #1a2b2f;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 10px;
+    border: 1px solid #1a2b2f;
 }
 
-.mc-table-row  {
+.mc-table-row {
     display: table-row;
-    border: 1px dashed darkblue;    /*border around each row */
-    background-color: white;
+    background: rgba(255, 255, 255, 0.08);
 }
-
 
 .mc-table-row .detail {
-    color:darkblue;
+    color: #1a2b2f;
     display: table-cell;
-   
-    padding: 5px;
+    padding: 8px 10px;
+    border: 1px solid rgba(26, 43, 47, 0.7);
 }
 
 .mc-table-row .detail img {
     max-height: 75px;
-    align-content: right;
+    box-shadow: none;
+    border-width: 2px;
 }
 
-/* must have no space before :hover */
 .mc-table-row:hover {
-    background-color: aliceblue;    
-    border: 1px solid;
+    background-color: rgba(164, 104, 66, 0.08);
 }
 
 .site-form {
     margin-top: 10px;
-    /* border: 2px solid darkblue; */
-    padding: 10px;
+    padding: 18px 0;
 }
 
-/* style the forms with class site-form */
-.site-form input, .site-form textarea, .site-form select {
+.site-form input,
+.site-form textarea,
+.site-form select {
     display: block;
-    margin: 5px 0 0 0;
-    padding: 5px;
+    margin: 8px 0 0 0;
+    padding: 8px 10px;
+    border: 1px solid #1a2b2f;
+    background: rgba(255, 255, 255, 0.3);
+    color: #1a2b2f;
+    font-family: Georgia, serif;
 }
 
-/* style the submit button ; didn't quite work?? */
-.site-form input [type="submit"] {
-    background: slategray;
+.site-form input[type="submit"] {
+    background: #1a2b2f;
+    color: #efe7d3;
     border: 0;
-    color: fff;
-    font-size: 1.2em;
-    border-radius: 4px;
-    margin: 5px 0;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-
-/* style the help text in the forms */
-.helptext, .helptext.ul {
-    margin-top: 0 auto;
-    bottom: 20px;
-    color: #bbb;
+.helptext,
+.helptext ul {
+    margin-top: 8px;
+    color: #50656d;
     font-size: 0.9em;
 }
 
-/* style the error list in the forms validation */
 .errorlist li {
-    padding: 10px;
+    padding: 10px 12px;
     list-style-type: none;
-    border: 1px solid crimson;
-    color: crimson;
+    border: 1px solid #8f3d2f;
+    color: #8f3d2f;
     margin: 10px 0;
+    background: rgba(143, 61, 47, 0.06);
 }
-
 
 .errorlist {
-    padding: 0px;
+    padding: 0;
 }
 
-
-/* responsive styles when width is less than 1400px */
 @media screen and (max-width: 560px) {
-    header h1 {
-        size: 0.8em;
+    body {
+        padding: 20px 16px 60px;
     }
 
-    nav li {
-        display: block;
-        margin-left: 0px;
-        font-size: 14px;
-        width: 100%;
+    nav ul {
+        gap: 12px;
+        padding: 10px 0;
     }
-    
-    nav button {
-        background: none;
-        color: slategray;
-        font-family: Arial;
-        cursor: pointer; 
-        border: 0;
-        font-size: 20px;
+
+    nav a {
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
     }
-    /* on mobile, display image as max 95% of available width*/
+
     img {
         max-width: 95%;
     }
