@@ -111,9 +111,17 @@ header {
 }
 
 footer {
-    width: 100%;
-    background: transparent;
-    position: static;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 80px;
+    background: #a46842;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
