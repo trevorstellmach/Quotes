@@ -1,0 +1,24 @@
+<!-- quotes/base.html -->
+
+{% load static %}
+<html>
+<head>
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="{% static 'restaurant-styles.css' %}">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'main_page' %}">Main</a></li>
+            <li><a href="{% url 'order_page' %}">Order</a></li>
+        </ul>
+    </nav>
+    
+    <!-- put page specific content -->
+     {% block content %}
+
+     {% endblock %}
+</body>
+
+</html>
